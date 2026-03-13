@@ -1,0 +1,367 @@
+@font-face {
+  font-family: 'ArchivoBlack';
+  src: url('/fonts/ArchivoBlack-Regular.woff2') format('woff2'),
+       url('/fonts/ArchivoBlack-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('/fonts/OpenSans-Bold.woff2') format('woff2'),
+       url('/fonts/OpenSans-Bold.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url('/fonts/OpenSans-Regular.woff2') format('woff2'),
+       url('/fonts/OpenSans-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-SemiBold';
+  src: url('/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+       url('/fonts/OpenSans-SemiBold.woff') format('woff');
+  font-weight: bolder;
+}
+/*resoluciones superiores a 1023px*/
+body{
+  font-size: 18px;
+  font-family: "OpenSans-Regular";
+  line-height: 1.5;
+  background-color: #111;
+  color: #fff;
+  position: relative;
+}
+body::after{
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  background:
+    radial-gradient(
+      circle at calc(80vw) calc(25vh),
+      rgba(109, 109, 255, 0.4) 0%,
+      rgba(17, 17, 17, 0.9) 15%
+    ),
+    #111;
+
+}
+/****header****/
+.header{
+  position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 40px 120px 0px 120px;
+}
+
+.header__image{
+  max-height: 500px;
+}
+
+.header__content{
+  padding-right: 20px;
+}
+
+.header__title{
+  font-family: "ArchivoBlack";
+  font-size: 72px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+.header__subtitle{
+  margin-top: 0;
+  margin-bottom: 30px;
+  opacity: 0.5;
+  font-size: 18px;
+}
+.header__subtitle-part2::before{
+  content: ' | ';
+  display: inline;
+}
+.header__text{
+  margin:0;
+}
+
+.header__nav-links{
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  gap:30px;
+}
+
+.header__nav-link a{
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 5px;
+  background-image: linear-gradient(
+    to right,
+    #4C1A97,
+    #6D6DFF
+  );
+
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 5px;
+}
+
+.header__nav-link a:hover{
+  opacity: 80%;
+}
+
+/****content****/
+.content{
+  padding: 0 120px 0px 120px;
+  position: relative;
+}
+
+.content_title{
+  margin-top:100px;
+  margin-bottom: 50px;
+  font-family: "ArchivoBlack";
+  font-size: 40px;
+}
+
+.content__nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content__nav img{
+  aspect-ratio: 1/1;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  flex: 1 1 260px;
+  overflow: hidden;
+}
+
+.card__media{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+  display: block;
+}
+
+.card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.15) 40%,
+    rgba(0,0,0,0.75) 100%
+  );
+}
+
+.card__icons{
+  position: absolute;
+  bottom: 10px;
+  padding: 10px 12px;
+}
+
+.card__icons img{
+  max-width: 40px;
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  flex: 1;
+}
+
+.card__title{
+  font-family: 'OpenSans-Bold';
+  font-size: 24px;
+  margin-top:0;
+  margin-bottom: 20px;
+}
+
+.card__description{
+  margin: 0;
+}
+
+.card__links{
+  margin-top: auto;
+  display: flex;
+  gap:20px;
+  padding-top: 30px;
+}
+
+.card__link{
+  text-decoration: none;
+}
+
+.card__link:hover{
+  opacity: 50%;
+}
+
+.link_style1{
+  color:#6D6DFF;
+  font-size: 16px;
+}
+
+.link_style2{
+  color:#ffffff;
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+/****footer****/
+.footer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 120px 120px 120px;
+  z-index: 0;
+  background:
+    radial-gradient(
+      circle at calc(50vw) calc(25vh),
+      rgba(109, 109, 255, 0.4) 0%,
+      rgba(17, 17, 17, 0.9) 50%
+    ),
+    #111;
+}
+
+.footer__title{
+  margin-top: 0;/**/
+  margin-bottom: 20px;
+  font-family: "ArchivoBlack";
+  font-size: 40px;
+}
+
+.footer__link{
+  text-decoration: none;
+  color: #6D6DFF;
+}
+
+.footer__link:hover{
+  opacity: 50%;
+}
+
+.footer__nav-links{
+  list-style: none;
+  padding: 0;
+  padding-top:30px;
+  display: flex;
+  flex-direction: row;
+  gap:80px;
+}
+
+.footer__nav-link a:hover{
+  opacity: 50%;
+}
+/*pantallas de hasta 1023px (Tabletas)*/
+@media(max-width: 1023px){
+  .header{
+    padding: 40px 40px 10px 40px;
+  }
+  .header__image{
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+  }
+  .header__title{
+    margin-top: 0;
+    font-size: 58px;
+  }
+  .header__subtitle-part2{
+    display: block;
+  }
+  .header__subtitle-part2::before{
+    display: none;
+  }
+  .content{
+    padding: 0px 40px 0px 40px;
+  }
+  .content_title{
+    margin-top: 80px;
+    margin-bottom: 30px;
+  }
+  .card{
+    flex: 1 1 330px;
+  }
+  .footer{
+    padding: 80px 40px 40px 40px;
+    background:
+    radial-gradient(
+      circle at calc(50vw) calc(15vh),
+      rgba(109, 109, 255, 0.4) 0%,
+      rgba(17, 17, 17, 0.9) 70%
+    ),
+    #111;
+  }
+}
+/*pantallas de hasta 767px (Móviles)*/
+@media(max-width: 767px){
+  body{
+    font-size: 16px;
+  }
+  .header{
+    padding: 20px 20px 10px 20px;
+    flex-direction: column;
+  }
+  .header__image{
+    aspect-ratio: 1/1;
+  }
+  .header__title{
+    font-size: 36px;
+    margin: 30px 0 10px 0;
+  }
+  .header__subtitle{
+    margin-bottom: 20px;
+  }
+  .header__nav-links{
+    flex-direction: column;
+  }
+  .content{
+    padding: 0px 20px 0px 20px;
+  }
+  .content_title{
+    margin-top: 70px;
+    font-size: 28px;
+  }
+  .cards{
+    gap:10px;
+  }
+  .footer{
+    padding: 60px 20px 20px 20px;
+    background:
+    radial-gradient(
+      circle at calc(50vw) calc(15vh),
+      rgba(109, 109, 255, 0.4) 0%,
+      rgba(17, 17, 17, 0.9) 100%
+    ),
+    #111;
+  }
+}
